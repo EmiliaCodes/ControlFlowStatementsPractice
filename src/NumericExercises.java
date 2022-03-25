@@ -1,5 +1,5 @@
 public class NumericExercises {
-/*  This class contains of few methods in which each simple exercise is solved. For more information
+    /* This class contains of few methods in which each simple exercise is solved. For more information
     about the given task refer to the particular method. */
 
 

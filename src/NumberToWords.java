@@ -1,7 +1,6 @@
 public class NumberToWords {
-
     /* This class contains a few methods, which aim to print the given number digit by
-     * digit with words. */
+    digit with words.*/
 
     public static void numberToWords (int number) {
         int count = getDigitCount(number);
