@@ -24,7 +24,6 @@ public class NumericExercises {
         /* This method finds the first and last digit of the given
          number and returns its sum. */
 
-        int a = 5;
         if(number < 0) return -1;
         int lastDigit = number % 10;
         int firstDigit = number;
@@ -55,7 +54,7 @@ public class NumericExercises {
         if (number < 1) System.out.println("Invalid Value");
         else {
             for (int i = 1; i <= number/2; i++){
-                if ( number % i == 0) System.out.println(i);
+                if (number % i == 0) System.out.println(i);
             }
             System.out.println(number);
         }
@@ -72,5 +71,17 @@ public class NumericExercises {
             }
         }
         return number == sum;
+    }
+
+    public static int getLargestPrime (int number) {
+        if (number <= 1) return -1;
+
+        int i = 2;
+        while (i <= number/2) {
+            if (number % i == 0){
+                number /= i;
+            } else i++;
+        }
+        return number;
     }
 }
