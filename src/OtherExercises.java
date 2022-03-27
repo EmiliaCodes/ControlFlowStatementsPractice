@@ -22,4 +22,36 @@ public class OtherExercises {
             return false;
         }
     }
+
+    public static void printSquareStar (int number){
+        /* This method prints diagonals to generate a rectangular pattern composed of
+        * stars (*). The star is printed based on four conditions:
+        * 1) Is it first or last row?
+        * 2) Is it first or last column?
+        * 3) If the row number equal to the column number?
+        * 4) Does the column number equals to rowCount - currentRow + 1? */
+
+        if (number < 5) System.out.println("Invalid Value");
+        else {
+            for (int currentRow = 1; currentRow <= number; currentRow++){
+               for (int currentColumn = 1; currentColumn <= number; currentColumn++){
+                   if (currentRow == 1 || currentRow == number) {
+                       System.out.print("*");
+                   } else if (currentColumn == 1 || currentColumn == number){
+                       System.out.print("*");
+                   } else if (currentColumn == currentRow) {
+                       System.out.print("*");
+                   } else if (currentColumn == (number - currentRow + 1)){
+                       System.out.print("*");
+                   } else {
+                       System.out.print(" ");
+                   }
+                   // breaking the line
+                   if (currentColumn == number){
+                       System.out.println();
+                   }
+               }
+            }
+        }
+    }
 }
