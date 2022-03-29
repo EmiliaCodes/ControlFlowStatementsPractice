@@ -40,4 +40,28 @@ public class ReadingUserInput {
             System.out.println("Your minimum number is " + min + ", and your maximum is " + max + ".");
         }
     }
+
+    public static void inputThenPrintSumAndAverage () {
+        /* This method should calculate average and sum of input numbers provided by
+        * the user. The input is in integers, so is the output. */
+
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        int counter = 0;
+
+        while (true) {
+            boolean isAnInt = scanner.hasNextInt();
+            if (isAnInt) {
+                int inputNumber = scanner.nextInt();
+                sum += inputNumber;
+                counter ++;
+            } else {
+                break;
+            }
+            scanner.nextLine();
+        }
+        scanner.close();
+        int avg = (int) Math.round((double)sum/counter);
+        System.out.println("SUM = " + sum + " AVG = " + avg);
+    }
 }
